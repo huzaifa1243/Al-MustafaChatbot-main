@@ -1,0 +1,411 @@
+{
+    "intents": [
+        {
+            "tag": "admission_general",
+            "patterns": [
+                "hanjuu",
+                "how to apply for admission?",
+                "How to get admission in",
+                "Where to get admission in",
+                "How to take admission in",
+                "where to apply for admission?",
+                "tell me about admissions?",
+                "admission",
+                "can I apply online for admission?",
+                "give me the admission form",
+                "where to apply for admission?",
+                "what are the steps to apply for admission?",
+                "how can I start the admission process?",
+                "where do I find the admission guidelines?",
+                "is there an online portal for admissions?",
+                "how do I access the admission application?",
+                "where can I get the admission form?",
+                "what is the online application process for admission?",
+                "how do I apply for admission online?",
+                "can I download the admission form online?",
+                "what is the link to the admission portal?",
+                "how to fill out the admission form?",
+                "what is the deadline to apply for admission?"
+            ],
+            "responses": [
+                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"/static/PDFs/Refund_Form.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\nnewew\r\n<embed src=\"/static/uploads/Resume-Hassan-Ali_2.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "admission_Requirements",
+            "patterns": [
+                "What documents are required for admission?",
+                "Admission Requirements",
+                "Things required for admission",
+                "What are the steps to apply for admission?",
+                "Is Fsc DMC required for admission?",
+                "I don't have Fsc DMC now, can I apply?",
+                "My result is pending, can I apply for admission?",
+                "Which docs to upload on the online portal?",
+                "Which documents do I need for admission?",
+                "What are the academic requirements for admission?",
+                "Do I need a recommendation letter for admission?",
+                "Is a personal statement required for admission?",
+                "Are there any specific forms needed for admission?",
+                "Do I need to submit my ID card for admission?",
+                "Are passport,sized photos required for admission?",
+                "Do I need my birth certificate for admission?",
+                "What financial documents are required for admission?",
+                "Do I need to provide proof of residence for admission?",
+                "Are there any medical requirements for admission?",
+                "What additional documents are needed for international students?"
+            ],
+            "responses": [
+                "<p>Following documents are required when you will apply for BS/MS/Mphil and Phd Programmes :<br>1. Passport Sized Photo <br>2. DMCs/Academic transcripts of previous Education <br>3. National ID Card <br>4. Admission Fee Challan <br><br>For further info and details, please visit <a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a></p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "admission_opening_closing",
+            "patterns": [
+                "In which departments admissions are open",
+                "In which programs admissions are open",
+                "Admissions are open",
+                "Departments where admissions are open",
+                "MS Admission Programmes",
+                "Phd Admission programmes",
+                "BS Admission programs",
+                "Are admssions open now?",
+                "When Masters admission will open?",
+                "Please tell me when admission will open",
+                "Are admissions available?",
+                "Is admission portal accepting applications for admissions?",
+                "When you will start accepting admission applications",
+                "Does admission closed now?",
+                "Are admissions closed?",
+                "Admission open",
+                "Admission Closed",
+                "admission close",
+                "When admission for MS will open?",
+                "When BS Admissions will open?",
+                "What is starting date of admissions?",
+                "What is admission closing date?",
+                "Admission Starting Date",
+                "Admission Closing Date"
+            ],
+            "responses": [
+                "<p>Admission Details for different programs with last date is mentioned in the poster below : <br><br><br><img src=\"static/images/testadmission.png\" width=\"285\" height=\"230\"><br><br><br>For further info and details, please visit <a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a></p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "admission_eligibility",
+            "patterns": [
+                "How much marks are required for admission in",
+                "What is minimum gpa required for admission in",
+                "What are minimum marks for admission in",
+                "How much marks in Fsc are required for admission?",
+                "I have 60 percent marks , can i apply?",
+                "Am i eligible for admission?",
+                "What is eligibility for admission?",
+                "I have A grade in Fsc , can i apply?",
+                "I have B grade , am I eligible for admission?",
+                "Am i eligible for admission?",
+                "Will I get the admission",
+                "What is my merit ?",
+                "Will i be on merit",
+                "Eligible for admission?",
+                "Please calculate my merit",
+                "How to calculate merit",
+                "How merit is calculated"
+            ],
+            "responses": [
+                "<p>Only 60 percent marks in FSc are required for admission</p>\r\n<h3>Please visit to Calculate merit for BS Level :</h3>\r\n<a style=\"color: white;\" href=\"http://127.0.0.1:5000/merit\" target=\"_blank\">Calculate BS Merit</a>\r\n"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "admission_test",
+            "patterns": [
+                "Is there any entry test for admission?",
+                "Do I have to give an admission test?",
+                "Admission test",
+                "What admission test is required?",
+                "What is the syllabus for the admission test?",
+                "Is there any admission test?",
+                "When is the admission test scheduled?",
+                "What is the format of the admission test?",
+                "How to prepare for the admission test?",
+                "Is the admission test mandatory?",
+                "What are the passing marks for the admission test?",
+                "Can I get a sample paper for the admission test?",
+                "Are there any practice tests for the admission test?",
+                "How long is the admission test?",
+                "What subjects are covered in the admission test?",
+                "Is there any negative marking in the admission test?",
+                "Where will the admission test be held?",
+                "Can I retake the admission test if I fail?",
+                "Is there an online option for the admission test?",
+                "What is the fee for the admission test?"
+            ],
+            "responses": [
+                "<p>Admission test is only for this this dept and this this program, in other depts we do merit calculation on basis of marks</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "admission_fee",
+            "patterns": [
+                "What is the application fee for admission?",
+                "What is the admission fee?",
+                "How much fee is required for the admission application?",
+                "Is there any application fee for admission?",
+                "What are the tuition fees for admission?",
+                "Are there any additional fees for admission?",
+                "Do I need to pay a deposit for admission?",
+                "Is the admission fee refundable?",
+                "Can I pay the admission fee in installments?",
+                "What is the fee structure for admission?",
+                "Are there any discounts on the admission fee?",
+                "What are the payment methods for the admission fee?",
+                "Is there a late fee for admission applications?",
+                "What is the fee for international student admission?",
+                "Are there any hidden charges in the admission fee?",
+                "How do I pay the admission fee?",
+                "Is the admission fee different for different programs?",
+                "What is the fee waiver policy for admission?",
+                "Where can I find information about the admission fee?",
+                "What is application fee",
+                "How much application fee is there for BS"
+            ],
+            "responses": [
+                "<p>The application fee for apply in 3 programs is Rs: 3000 /- <br>Pay the fee challan in bank and Upload the scanned copy of paid challan in online admission portal , so that we can process your application.</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "semester_fee",
+            "patterns": [
+                "What is semester fee?",
+                "How much semester fee i have to pay",
+                "What is fee for one semester",
+                "What is tution fee",
+                "How much semester fee",
+                "How much tution fee",
+                "What is fee structure",
+                "Fee structure for BS",
+                "Fee structure for MS",
+                "What is semester fee for Masters",
+                "What is semester fee for Bachelors",
+                "How much tution fee for MS",
+                "How much tution fee for BS",
+                "Detailed semester fee structure",
+                "Fee structure",
+                "Detailed fee structure",
+                "Where to get fee structure"
+            ],
+            "responses": [
+                "<p>Fee structure for different programs is here in this image, image abi tk ni mili humen</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "degree_apply",
+            "patterns": [
+                "I want to apply for degree",
+                "How to apply for degree",
+                "Give me degree apply form",
+                "Degree form",
+                "What is procedure to get degree",
+                "When to apply for degree",
+                "Give me degree form",
+                "Degree performa",
+                "How to take degree",
+                "I want to apply for my MS Degree",
+                "how to apply for MS degree",
+                "How to apply for BS Degree",
+                "How to get Phd degree",
+                "From where i apply for degree",
+                "degree",
+                "Degree Application form",
+                "What documents are required for degree application",
+                "What documents to attach for MS Degree Applicatin",
+                "Documents for degree",
+                "degree documents",
+                "What is degree fee for MS",
+                "What is degree fee for BS",
+                "Phd Degree fee",
+                "Ms degree fee",
+                "BS Degree fee",
+                "Degree fee",
+                "Where to submit degree application form",
+                "What is fee for urgent degree",
+                "Normal degree fee",
+                "Uregent Degree fee",
+                "Time for normal degree",
+                "time for urgent degree"
+            ],
+            "responses": [
+                "<p>You can apply for degree through this degree form : <br><br><embed src=\"static/PDFs/degree_form.pdf\" style=\"width: 285px;height:450px;\"></embed><br><br>Attachments required for different degrees are : <br>BS Degree : <br>For BS degree you will need to attach following documents with this degree form : <br>1. ID Card Copy <br>2. Passport sized photos (2x) <br>3. Paid Challan of Degree fee ( 5500 for Urgent and 3000 for Normal) <br>4. FA/Fsc DMC Verified by concerned board <br>5. Dues Clearance <br><br>For Masters Degree you will need following documents : <br>1. Previous + Final DMCs <br>2. ID Card Copies <br>3. Passport Sized photos (2x) <br>4. Degree Fee (5500 for urgent and 3000 for normal) <br>5. Last Degree ,if it is from Hazara University , provide just a copy of it. If last degree is not from Hazara University the provide verified degree by concerned university. <br>6. Fee Clearance <br><br>For MS/Mphil/Phd/LLM you will need following documents : <br>1. ID Card Copy <br>2. Passport sized photos (2x) <br>3. Degree Fee (6500 Normal and 12500 Urgent) <br>4. Transcripts and previous education verified documents <br>5. Notification Copy <br>6. Fee Clearance <br><br>Private student will attest degree form provided above from Gazetted Officer, while the regular students will duely sign it from their concerned department or from their college. <br>Submit the degree form with required documents in window no 3 , Examination section , Hazara University Mansehra.</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "provisional_certificate",
+            "patterns": [
+                "I want to get provisional certificate",
+                "How to get provisional certificate",
+                "Where to apply for provisional certificate",
+                "provisional",
+                "provisional certificate",
+                "Give me provisional certificate application form",
+                "Provisional certificate apply",
+                "Apply for provisional certificate",
+                "Where to submit provisional certificate form",
+                "Please provide me provisional certificate performa",
+                "what docs required for provisonal certificate",
+                "How to apply for provisional certificate"
+            ],
+            "responses": [
+                "<p>Guidelines for provisional certificate are: <br><br>1. College / Late College students are required to receive their Provisional Certificates from their concerned colleges.<br>2. All candidates are required to submit their attested copy /copies of transcript and DMC,s of both parts respectively with application form.<br>3. Clearance Certificate must be attached with the form.( Only for Internal Students)<br>4. Copy of Notification must be attached with the forms ( only for M.Phill and P.hD students).<br>5. Nobody can apply on behalf of the candidates concerned.<br>6. The Provisional Certificate on urgent basis will be issued in same day on the payment of Rs. 1000/- (ONE THOUSAND only) and Normal will be issued within one week on the payment of Rs:700/- (Seven Hundred only) <br><br>Please download provisional certificate application form from below: <br><br><br><embed src=\"static/PDFs/Application_Form_Provisional_certificate.pdf\" style=\"width: 285px;height:450px;\"  ></embed></p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "semester_freeze",
+            "patterns": [
+                "I want to freeze the semester",
+                "How to freeze semester",
+                "What are rules for semester freezing",
+                "can i freeze the semester",
+                "Give me semester freeze form",
+                "What is procedure to freeze a semester",
+                "method to freeze semester",
+                "semester freeze",
+                "Freezing a semester",
+                "Semester freeze form",
+                "semester freeze performa",
+                "How many semester I can freeze in BS program",
+                "Maximum semester freeze"
+            ],
+            "responses": [
+                "<p>Here is the Semester Freezing Form : <br><br><br><embed src=\"static/PDFs/freeze_sem.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\" ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "course_registration",
+            "patterns": [
+                "How to register in a course",
+                "I want to register in course",
+                "Give me course registration form",
+                "Course Registration form",
+                "What is method to register a course",
+                "registering a course",
+                "Provide me course registration details",
+                "Am i eligible for course registration",
+                "What documents are needed for course registration",
+                "docs for course registration",
+                "course registration application",
+                "I want to register in a subject",
+                "How to register in subject ",
+                "give me subject registeration form",
+                "what is method for subject registration"
+            ],
+            "responses": [
+                "<p>Here is the Course Registration Form : <br><br><br><embed src=\"static/PDFs/course_reg_form.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\" ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "course_WITHDRAWAL ",
+            "patterns": [
+                "How to  a course",
+                "I want to withdraw in course",
+                "Give me course withdrawal form",
+                "Course withdrawal form",
+                "What is method to withdraw a course",
+                "withdrawing a course",
+                "Provide me course withdraw details",
+                "Am i eligible for course withdraw",
+                "What documents are needed for course withdrawal",
+                "docs for course withdrawal",
+                "course withdrawal application",
+                "I want to withdraw a subject",
+                "How to withdraw a subject ",
+                "give me subject withdrawal form",
+                "what is method for subject withdrawal"
+            ],
+            "responses": [
+                "<p>Here is the Course/Subject withdrawal Form : <br><br><br><embed src=\"static/PDFs/course_withdraw.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\"  ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "drop_form",
+            "patterns": [
+                "I want to drop a course",
+                "I want to drop a subject",
+                "I want to drop a semseter",
+                "How to drop course",
+                "How to drop subject",
+                "How to drop semester",
+                "What is method to drop a subject",
+                "Give me subject drop form",
+                "Semester drop",
+                "courese drop",
+                "procedure for dropping course/subject/semester",
+                "Can i drop subject",
+                "can i drop semester",
+                "when i can drop semester",
+                "Semester drop form",
+                "subject drop form",
+                "Course drop form"
+            ],
+            "responses": [
+                "<p>Here is the Drop Form : <br><br><br><embed src=\"static/PDFs/drop_form.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\" ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "subject_repetition",
+            "patterns": [
+                "I want to repeat a course",
+                "I want to repeat a subject",
+                "How to repeat course",
+                "How to repeat subject",
+                "What is method to repeat a subject",
+                "Give me subject repeatition form",
+                "course repeat",
+                "procedure for repeating course/subject",
+                "Can i repeat subject",
+                "when i can repeat semester",
+                "subject repeat form",
+                "Course repeat form",
+                "repeat",
+                "repeatition"
+            ],
+            "responses": [
+                "<p>Here is the Course repetition Form : <br><br><br><embed src=\"static/PDFs/subject_repetition_form.pdf\" width=\"800\" height=\"500\"  style=\"width: 285px;height:450px;\"></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section , subj rep test</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "change_course",
+            "patterns": [
+                "I want to change a course",
+                "I want to change a subject",
+                "How to change course",
+                "How to change subject",
+                "What is method to change a subject",
+                "Give me subject change form",
+                "courese change",
+                "procedure for changeing course/subject",
+                "Can i change subject",
+                "when i can change",
+                "subject change form",
+                "Course change form"
+            ],
+            "responses": [
+                "<p>Here is the Course Change Form : <br><br><br><embed src=\"static/PDFs/change_course.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\" ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
+            ],
+            "context_set": ""
+        }
+    ]
+}

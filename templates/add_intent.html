@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Intent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .upload-container {
+            margin-bottom: 20px;
+        }
+
+        .copy-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add New Intent</h1>
+    <form id="add-intent-form" method="POST" action="/add_intent">
+        <label for="new-tag">Tag:</label>
+        <input type="text" id="new-tag" name="tag" required>
+
+        <label for="new-patterns">Patterns (one per line):</label>
+        <textarea id="new-patterns" name="patterns" rows="5" required></textarea>
+
+        <label for="new-responses">Responses (one per line):</label>
+        <textarea id="new-responses" name="responses" rows="5" required></textarea>
+
+        <label for="new-context">Context Set:</label>
+        <input type="text" id="new-context" name="context_set">
+
+        <!-- Upload Container -->
+        <div class="upload-container">
+            <label for="file_upload">Upload File:</label>
+            <input type="file" id="file_upload" name="file">
+            <button class="copy-button" type="button" onclick="uploadFile()">Upload</button>
+            <div id="upload_result"></div>
+        </div>
+
+        <button type="submit">Add New Intent</button>
+    </form>
+
+    <script>
+        function uploadFile() {
+            var input = document.getElementById('file_upload');
+            var file = input.files[0];
+            var formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var uploadResult = document.getElementById('upload_result');
+                uploadResult.innerText = data.tag;
+
+                var copyButton = document.createElement('button');
+                copyButton.innerText = 'Copy Tag';
+                copyButton.className = 'copy-button';
+                copyButton.type = 'button'; // Ensure it's not a submit button
+                copyButton.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent form submission
+                    copyToClipboard(data.tag);
+                });
+
+                uploadResult.insertBefore(copyButton, uploadResult.firstChild);
+            })
+            .catch(error => {
+                console.error('Error uploading file:', error);
+            });
+        }
+
+        function copyToClipboard(text) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+    </script>
+</body>
+</html>

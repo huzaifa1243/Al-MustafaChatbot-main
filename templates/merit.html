@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merit Calculation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            padding: 20px;
+            background-color: #007bff;
+            border-radius: 8px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="button"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        button[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>BS Merit Estimate Calculation</h1>
+    <form id="meritForm">
+        <label for="metricMarks">Enter Metric Marks</label>
+        <input type="number" id="metricMarks" placeholder="Enter Metric Marks" required>
+        
+        <label for="fscMarks">Enter Fsc Marks</label>
+        <input type="number" id="fscMarks" placeholder="Enter Fsc Marks" required>
+        
+        <button type="button" onclick="calculateMerit()">Calculate Merit</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculateMerit() {
+            const metricMarks = parseFloat(document.getElementById('metricMarks').value);
+            const fscMarks = parseFloat(document.getElementById('fscMarks').value);
+
+            if (isNaN(metricMarks) || isNaN(fscMarks)) {
+                document.getElementById('result').innerText = 'Please enter valid marks.';
+                return;
+            }
+
+            if (metricMarks > 1100 || fscMarks > 1100) {
+                document.getElementById('result').innerText = 'Invalid marks. Maximum marks should be 1100.';
+                return;
+            }
+
+            const metricWeight = 0.4;
+            const fscWeight = 0.6;
+            const merit = (metricMarks * metricWeight) + (fscMarks * fscWeight);
+            document.getElementById('result').innerText = `Estimated Merit Points: ${merit.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

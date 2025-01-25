@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Intents</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete Intents</h1>
+    <form id="delete-intent-form" method="POST" action="/delete_intents">
+        {% for intent in intents %}
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="intents_to_delete[]" id="intent-{{ loop.index }}" value="{{ intent.tag }}">
+            <label class="form-check-label" for="intent-{{ loop.index }}">{{ intent.tag }}</label>
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-danger">Delete Selected Intents</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Intents</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .copy-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .copy-button:hover {
+        background-color: #0056b3;
+    }
+
+        .tag-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            margin-bottom: 10px;
+        }
+
+        .save-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+
+        .upload-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Intents Page</h1>
+    {% for intent in intents %}
+        <div class="tag-container">
+            <h2>Edit Tag: {{ intent.tag }}</h2>
+            <form id="update-{{ intent.tag }}-response" method="POST" action="/update_response">
+                <label for="tag_{{ intent.tag }}">Tag:</label>
+                <input type="text" id="tag_{{ intent.tag }}" name="tag_{{ intent.tag }}" value="{{ intent.tag }}" style="width: 250px;">
+                <br>
+                <h3>Edit Patterns:</h3>
+                {% for pattern in intent.patterns %}
+                    <input type="text" name="pattern_{{ intent.tag }}[]" value="{{ pattern }}"style="width: 600px;">
+                    <br>
+                {% endfor %}
+                <h3>Edit Intents:</h3>
+                <textarea id="response_{{ intent.tag }}" name="response_{{ intent.tag }}" rows="10" cols="80">{{ intent.responses[0] }}</textarea>
+                <br>
+                <button class="save-button" type="submit" form="update-{{ intent.tag }}-response">Save</button>
+            </form>
+    <div class="upload-container">
+        <label for="file_upload_{{ intent.tag }}">Upload File:</label>
+        <input type="file" id="file_upload_{{ intent.tag }}" name="file">
+        <button class="save-button" onclick="uploadFile('{{ intent.tag }}')">Upload</button>
+        <div id="upload_result_{{ intent.tag }}"></div>
+    </div>
+    {% if intent.uploaded_file %}
+        <div class="file-preview">
+            {{ intent.uploaded_file }}
+            <button class="copy-button" onclick="copyHTML('uploaded_file_{{ intent.tag }}')">Copy HTML</button>
+        </div>
+    {% endif %}
+</div>
+
+    {% endfor %}
+    <script>
+        function copyHTML(tagId) {
+            var tag = document.getElementById(tagId);
+            var range = document.createRange();
+            range.selectNode(tag);
+            window.getSelection().removeAllRanges(); // Clear previous selections
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges(); // Clear the selection after copying
+        }
+    </script>
+    
+    <!-- Initialize SimpleMDE markdown editor -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            {% for intent in intents %}
+                var simplemde_{{ intent.tag }} = new SimpleMDE({ element: document.getElementById('response_{{ intent.tag }}') });
+            {% endfor %}
+        });
+
+        function uploadFile(tag) {
+    var input = document.getElementById('file_upload_' + tag);
+    var file = input.files[0];
+    var formData = new FormData();
+    formData.append('file', file);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Display only the raw tag text without any HTML rendering
+        var uploadResult = document.getElementById('upload_result_' + tag);
+        uploadResult.innerText = data.tag;
+        
+        // Create a button to copy the raw tag text
+var copyButton = document.createElement('button');
+copyButton.innerText = 'Copy Tag';
+copyButton.className = 'copy-button'; // Add the copy-button class
+copyButton.addEventListener('click', function() {
+    copyToClipboard(data.tag);
+});
+
+        
+        // Append the copy button before the raw tag text
+        uploadResult.insertBefore(copyButton, uploadResult.firstChild);
+    })
+    .catch(error => {
+        console.error('Error uploading file:', error);
+    });
+}
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    
+}
+
+    </script>
+</body>
+</html>

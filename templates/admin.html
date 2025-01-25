@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999; /* Lower z-index to go behind sidebar */
+        }
+
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Change top to 0 to align with the header */
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px; /* Move content down to account for header */
+            box-sizing: border-box;
+            z-index: 1000; /* Higher z-index to stay above header */
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #007bff;
+        }
+
+        .container {
+            flex: 1;
+            margin-left: 250px; /* Adjust margin to fit with the sidebar */
+            padding: 80px 20px 20px; /* Add padding to account for header and general spacing */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 5%;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 20px); /* Adjust width to fit four cards per row */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 15px 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 250px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="margin-left: 10%;">Admin Dashboard - Al Mustafa Hospital AI Chatbot</h1>
+    </div>
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="/add_intent_page">Add Intent</a>
+        <a href="/edit_responses">Edit Intents</a>
+        <a href="/delete_intent_page">Delete Intent</a>
+        <a href="/train_model_page">Train Model</a>
+        <a href="/manage_files">Manage Files</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Add New Intent</h2>
+            <p>Click below to add a new intent</p>
+            <a href="/add_intent_page" class="btn">Add New Intent</a>
+        </div>
+        <div class="card">
+            <h2>Edit Intents</h2>
+            <p>Click below to edit Intents</p>
+            <a href="/edit_responses" class="btn">Edit Intents</a>
+        </div>
+        <div class="card">
+            <h2>Delete Intent</h2>
+            <p>Click below to delete an intent</p>
+            <a href="/delete_intent_page" class="btn">Delete Intent</a>
+        </div>
+        <div class="card">
+            <h2>Train Model</h2>
+            <p>Click below to retrain the model with updated intents</p>
+            <a href="/train_model_page" class="btn">Train Model</a>
+        </div>
+        <div class="card">
+            <h2>Manage File Uploads</h2>
+            <p>Click below to manage uploaded files</p>
+            <a href="/manage_files" class="btn">Manage Files</a>
+        </div>
+        <div class="card">
+            <h2>Create New Admin User</h2>
+            <p>Click below to create a new admin user.</p>
+            <a href="/create_admin_user_page" class="btn">Create New Admin User</a>
+        </div>
+        
+    </div>
+    <div class="footer">
+        Admin Dashboard &copy; 2024. All rights reserved.
+    </div>
+</body>
+</html>
