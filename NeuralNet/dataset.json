@@ -661,6 +661,147 @@
                 "Dr.AdeelaHussainKhan is the plastic surgeon in this hospital she deals with patients repair, reconstruction, or replacement of physical defects of form or function involving the skin, musculoskeletal system, extremities, breast and trunk, etc.and his availability of in hospital from 9AM to 5PM monday to friday, fee for Dr.AdeelaHussainKhan is 5000 rupees only.\r\n\r\nvideo paste ha.\r\n<video controls src=\"/static/uploads/plastic_surgery_40_sec_video.mp4\" style=\"width: 285px;height:450px;\"></video>"
             ],
             "context_set": ""
+        },
+        {
+            "tag": "Dr_PirAdilShah",
+            "patterns": [
+                "I want appointment with Dr_PirAdilShah",
+                "When Dr_PirAdilShah will be on clinic",
+                "What are specialities of Dr_PirAdilShah",
+                "What is fee of Dr_PirAdilShah"
+            ],
+            "responses": [
+                "Dr.PirAdilShah is the child specialist in this hosapital he deals with  Pediatrics, with expertise in child growth, neonatology, and childhood infections and his availability of in hospital from 9AM to 5PM monday to friday, fee for Dr_PirAdilShah is 2000 rupees only."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Dr_Junaid ",
+            "patterns": [
+                "I want appointment with Dr_Junaid",
+                "When Dr_Junaid will be on clinic",
+                "What are specialities of Dr_Junaid",
+                "What is fee of Dr_Junaid"
+            ],
+            "responses": [
+                "Dr_Junaid is the child specialist in this hospital he deals with Pediatrics, with expertise in child growth, neonatology, and childhood infections. Dr_Junaid will be on clinic from 9AM to 5PM.The fee of Dr_Junaid is 2000 rupees only."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Dr_Samar",
+            "patterns": [
+                "I want appointment with Dr_Samar",
+                "When Dr_Samar will be on clinic",
+                "What are specialities of Dr_Samar",
+                "What is fee of Dr_Samar"
+            ],
+            "responses": [
+                "Dr_Samar is the medicine specialist is this hospital they diagnose and treat a wide range of medical issues, including infections, injuries, and internal diseases. and his availability of in hospital from 9AM to 5PM monday to friday,fee for Dr_Samar is 2000 rupees only."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Dr_Zanib",
+            "patterns": [
+                "I want appointment with Dr_Zanib",
+                "When Dr_Zanib will be on clinic",
+                "What are specialities of Dr_Zanib",
+                "What is fee of Dr_Zanib"
+            ],
+            "responses": [
+                "Dr_Zanib is the medicine specialist is this hospital they diagnose and treat a wide range of medical issues, including infections, injuries, and internal diseases. and his availability of in hospital from 9AM to 5PM monday to friday,fee for Dr_Zanib is 2000 rupees only"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Dr_Muneza",
+            "patterns": [
+                "I want appointment with Dr_Muneza",
+                "When Dr_Muneza will be on clinic",
+                "What are specialities of Dr_Muneza",
+                "What is fee of Dr_Muneza"
+            ],
+            "responses": [
+                "Dr_Muneza is the gynecologist in this hospital she deals with female reproductive system, including the uterus, ovaries, fallopian tubes, and breasts. She diagnose and treat conditions, and provide preventive care. . and her availability of in hospital from 9AM to 5PM monday to friday, fee for Dr_Muneza is 2000 rupees only."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Dr_Maleeha",
+            "patterns": [
+                "I want appointment with Dr_Maleeha",
+                "When Dr_Maleeha will be on clinic",
+                "What are specialities of Dr_Maleeha",
+                "What is fee of Dr_Maleeha"
+            ],
+            "responses": [
+                "Dr_Maleeha is the gynecologist in this hospital she deals with female reproductive system, including the uterus, ovaries, fallopian tubes, and breasts. She diagnose and treat conditions, and provide preventive care. and her availability of in hospital from 9AM to 5PM monday to friday, fee for Dr_Maleeha is 2000 rupees only."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Appointment",
+            "patterns": [
+                "How can I book an appointment at  Al Mustafa Hospital",
+                "Does Al Mustafa Hospital offer online appointment booking",
+                "I need information about scheduling a consultation with a doctor."
+            ],
+            "responses": [
+                "You can book an appointment at Al Mustafa Hospital by calling our appointment desk at (0997) 383501 visiting our hospital reception in person, or using our online appointment booking system available on our official website  https://www.almustafausa.org/dhodial-hospital/ "
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Discharged",
+            "patterns": [
+                "How to discharged"
+            ],
+            "responses": [
+                "<embed src=\"/static/uploads/Standard_Discharge_Card.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Sample",
+            "patterns": [
+                "How to get medical report"
+            ],
+            "responses": [
+                "<embed src=\"/static/uploads/Sample-filled-in-MR.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Admission",
+            "patterns": [
+                "I need admission form"
+            ],
+            "responses": [
+                "<embed src=\"/static/uploads/Patient_Admission_Form_Al_Mustafa.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Operation_video",
+            "patterns": [
+                "I want to see a operation"
+            ],
+            "responses": [
+                "<video controls src=\"http://127.0.0.1:5000/static/uploads/5114823_People_Person_3840x2160.mp4\" width=\"100%\" style=\"max-width: 100%; height: auto; border-radius: 10px;\"></video>\r\n"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Blood_Bank",
+            "patterns": [
+                "Where can I donate blood",
+                "I want to donate a blood"
+            ],
+            "responses": [
+                "Thank you for your interest in donating blood.\r\nYou can donate blood at AL Mustafa Hospital Dhodial Blood Donation Center, located on the Ground Floor near Lab Collection Area.\r\nTimings: Monday to Saturday, 9:00 AM to 5:00 PM\"\r\n<video \r\n  controls \r\n  src=\"/static/uploads/6290542-uhd_3840_2160_30fps.mp4\" \r\n  width=\"100%\" \r\n  style=\"max-width: 100%; height: auto; border-radius: 10px;\">\r\n  Your browser does not support the video tag.\r\n</video>\r\n"
+            ],
+            "context_set": ""
         }
     ]
 }

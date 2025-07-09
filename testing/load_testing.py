@@ -6,7 +6,7 @@ import time
 url = 'http://127.0.0.1:5000/get_response'
 
 # Sample payload for the requests
-payload = {"question": "What is semester fee"}
+payload = {"question": "What  is doctor fee"}
 
 # Function to send a single API request
 def send_request(session, url, payload):
